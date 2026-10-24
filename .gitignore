@@ -1,0 +1,16 @@
+# Function secrets — copy from api/local.settings.example.json, never commit the real file
+local.settings.json
+
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.python_packages/
+.pytest_cache/
+
+# Terraform (you may add infra later)
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+crash.log

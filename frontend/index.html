@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL shortener</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>URL shortener</h1>
+      <p class="lead">Paste a long http(s) URL and get a short link.</p>
+
+      <form id="shorten-form">
+        <label for="url-input">Long URL</label>
+        <input
+          id="url-input"
+          name="url"
+          type="url"
+          placeholder="https://example.com/very/long/path"
+          required
+        />
+        <button type="submit" id="submit-btn">Shorten</button>
+      </form>
+
+      <p id="error" class="error" hidden></p>
+
+      <section id="result" class="result" hidden>
+        <label for="short-url">Short link</label>
+        <div class="copy-row">
+          <input id="short-url" type="text" readonly />
+          <button type="button" id="copy-btn">Copy</button>
+        </div>
+        <p id="copy-status" class="status" hidden></p>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
